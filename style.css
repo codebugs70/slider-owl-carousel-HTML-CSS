@@ -1,0 +1,147 @@
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #191825;
+  padding: 15px 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.toggle {
+  font-size: 25px;
+  cursor: pointer;
+}
+label {
+  display: none;
+}
+input {
+  display: none;
+}
+input:checked ~ .menu {
+  /* transform: translateX(0); */
+  transform: translateY(0);
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu-link {
+  transition: 0.2s linear;
+  font-weight: 600;
+}
+.menu-link:hover {
+  color: #e21818;
+}
+/* ====================================== */
+
+/* content */
+section {
+  margin-top: 100px;
+}
+section h1 {
+  font-size: 50px;
+  /* color: #aa77ff; */
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.slider-list {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.slider-item {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  border-radius: 5px;
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.slider-img {
+  margin: 0 auto;
+  border: 5px solid purple;
+  width: 150px;
+  height: 150px;
+  border-radius: 100rem;
+}
+.slider-img img {
+  border-radius: 100rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.name {
+  color: #3e54ac;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.desc {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* custom owl carousel */
+.owl-dots {
+  padding-top: 20px;
+  /* background-color: #ccc; */
+}
+.owl-dot span {
+  background-color: #eee;
+}
+.owl-dot.active span {
+  background-color: #3e54ac !important;
+}
+/* ======================================== */
+/* responsive */
+@media screen and (max-width: 500px) {
+  .menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding-top: 10px;
+    right: 0;
+    background-color: #3e54ac;
+    display: flex;
+    gap: 10px;
+    transition: 0.3s linear;
+    /* transform: translateX(100%); */
+    transform: translateY(-200%);
+    flex-direction: column;
+    align-items: stretch;
+  }
+  section .title {
+    font-size: 30px;
+  }
+  .menu-item {
+    padding: 10px 20px;
+  }
+  label {
+    display: block;
+  }
+}
